@@ -39,5 +39,13 @@
   },
   "dependencies": {
     "d3-array": "^2.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhyfritz/bin-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhyfritz/bin-data/issues"
+  },
+  "homepage": "https://github.com/mhyfritz/bin-data#readme"
 }
