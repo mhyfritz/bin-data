@@ -19,3 +19,13 @@ const binData = require("@mhyfritz/bin-data");
 
 import * as binData from "@mhyfritz/bin-data";
 ```
+
+Browser:
+
+```html
+<!-- unpkg -->
+<script src="https://unpkg.com/@mhyfritz/bin-data"></script>
+
+<!-- jsdelivr -->
+<script src="https://cdn.jsdelivr.net/npm/@mhyfritz/bin-data"></script>
+```
