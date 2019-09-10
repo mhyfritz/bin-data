@@ -1,0 +1,43 @@
+{
+  "name": "bin-data",
+  "version": "0.0.1",
+  "description": "Bin data into given number of chunks and pick a representative value for each bin.",
+  "main": "dist/bin-data.umd.js",
+  "module": "dist/bin-data.esm.js",
+  "unpkg": "dist/bin-data.umd.min.js",
+  "jsdelivr": "dist/bin-data.umd.min.js",
+  "scripts": {
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "release": "npx np",
+    "test": "jest",
+    "version": "npm run build"
+  },
+  "keywords": [
+    "array",
+    "binning",
+    "bucketing",
+    "chunks",
+    "compression",
+    "iterable",
+    "quantization"
+  ],
+  "author": {
+    "name": "Markus Hsi-Yang Fritz",
+    "email": "markus.h.y.fritz@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "camelcase": "^5.3.1",
+    "jest": "^24.8.0",
+    "rollup": "^1.19.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.1"
+  },
+  "dependencies": {
+    "d3-array": "^2.3.1"
+  }
+}
