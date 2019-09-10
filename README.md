@@ -77,3 +77,5 @@ Object holding pre-defined functions to pick bin representative,
 e.g. `pick.min` to pick minimum value of bin.
 See [`d3-array`](https://github.com/d3/d3-array/blob/09b8ff21742b365a7090e728120640fb45464637/README.md)
 for all options.
+
+[Try `bin-data` in your browser.](https://npm.runkit.com/@mhyfritz/bin-data)
