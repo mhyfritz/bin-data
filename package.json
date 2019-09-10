@@ -1,5 +1,5 @@
 {
-  "name": "bin-data",
+  "name": "@mhyfritz/bin-data",
   "version": "0.0.1",
   "description": "Bin data into given number of chunks and pick a representative value for each bin.",
   "main": "dist/bin-data.umd.js",

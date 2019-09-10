@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-npm install bin-data
+npm install @mhyfritz/bin-data
 ```
 
 ## Usage
@@ -13,21 +13,9 @@ npm install bin-data
 Node:
 
 ```javascript
-const binData = require("bin-data");
+const binData = require("@mhyfritz/bin-data");
 
 // or
 
-import * as binData from "bin-data";
+import * as binData from "@mhyfritz/bin-data";
 ```
-
-Browser:
-
-```html
-<!-- unpkg -->
-<script src="https://unpkg.com/bin-data"></script>
-
-<!-- jsdelivr -->
-<script src="https://cdn.jsdelivr.net/npm/bin-data"></script>
-```
-
-[Try `bin-data` in your browser.](https://npm.runkit.com/bin-data)
