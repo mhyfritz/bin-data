@@ -2,7 +2,7 @@ import * as d3Array from "d3-array";
 
 export { bin, d3Array as pick };
 
-function bin(data, numBins, pickRepresentative = pick.max) {
+function bin(data, numBins, pickRepresentative = d3Array.max) {
   if (!Array.isArray(data)) {
     data = Array.from(data);
   }
