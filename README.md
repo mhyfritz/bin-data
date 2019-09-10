@@ -13,11 +13,11 @@ npm install bin-data
 Node:
 
 ```javascript
-const hilbertCurve = require("bin-data");
+const binData = require("bin-data");
 
 // or
 
-import * as hilbertCurve from "bin-data";
+import * as binData from "bin-data";
 ```
 
 Browser:
