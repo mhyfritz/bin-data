@@ -37,8 +37,8 @@ API:
 ```javascript
 const { bin, chunk, pick } = require("@mhyfritz/bin-data");
 
-// data = [-10, -9, ..., -1. 0, 1, ..., 9, 10]
-const data = Array.from({ length: 21 }, (_, i) => i - 11 + 1);
+// data = [-10, -9, ..., -1, 0, 1, ..., 9, 10]
+const data = Array.from({ length: 21 }, (_, i) => i - 10);
 
 // we can get the raw chunks if we want
 chunk(data, 4);
@@ -73,6 +73,7 @@ function absMax(chunk) {
   }
   return ret;
 }
+
 bin(data, 4, absMax);
 // ==> [ -10, -5, 5, 10 ]
 ```
