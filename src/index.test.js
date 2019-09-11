@@ -1,4 +1,4 @@
-const { bin, pick } = require("../");
+const { bin, chunk, pick } = require("../");
 
 // FIXME: just a dummy for now...
 test("dummy", () => {

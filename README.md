@@ -1,6 +1,6 @@
 # Data binning
 
-> Bin data into given number of chunks and pick a representative value for each bin.
+> Partition data into given number of chunks and pick a representative value for each chunk.
 
 ## Installation
 
@@ -78,11 +78,11 @@ bin(data, 4, absMax);
 // ==> [ -10, -5, 5, 10 ]
 ```
 
-### `bin(data, numBins, pickRepresentative)`
+### `bin(data, numChunks, pickRepresentative)`
 
 - `data`: an array or other iterable
-- `numBins`: the number of bins to generate
-- `pickRepresentative [chunk => value]`: function to pick representative value of bins; default: `pick.max` (see below)
+- `numChunks`: the number of chunks to generate
+- `pickRepresentative [chunk => value]`: function to pick representative value of chunk; default: `pick.max` (see below)
 
 Example
 
@@ -93,8 +93,8 @@ bin([1, 2, 3, 4, 5], 2);
 
 ### `pick`
 
-Object holding pre-defined functions to pick bin representative,
-e.g. `pick.min` to pick minimum value of bin.
+Object holding pre-defined functions to pick chunk representative,
+e.g. `pick.min` to pick minimum value of chunk.
 See [`d3-array`](https://github.com/d3/d3-array/blob/09b8ff21742b365a7090e728120640fb45464637/README.md)
 for all options.
 
@@ -109,9 +109,9 @@ bin([1, 2, 3, 4, 5], 2, pick.mean);
 // ==> [ 2, 4.5 ]
 ```
 
-### `chunk(data, numBins)`
+### `chunk(data, numChunks)`
 
-Partition `data` into `numBins` chunks. Returns an array holding values of chunks plus start
+Partition `data` into `numChunks` chunks. Returns an array holding values of chunks plus start
 and end indices in `data`.
 
 Example
