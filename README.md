@@ -63,7 +63,18 @@ bin(data, 4, pick.mean);
 bin(data, 4, chunk => pick.quantile(chunk, 0.75));
 // ==> [ -7, -1.25, 4, 9 ]
 
-// custom function:  maximum of the absolute values
+// for complex, non-numeric data, specify an accessor function
+// objects = [{x: -10}, ..., {x: 0}, ..., {x: 10}]
+const objects = data.map(value => ({ x: value }));
+bin(objects, 4, chunk => pick.max(chunk, d => d.x));
+// [ -6, 0, 5, 10 ]
+
+// for getting back the actual objects, one can use `pick.greatest()`
+bin(objects, 4, chunk => pick.greatest(chunk, d => d.x));
+// [ { x: -6 }, { x: 0 }, { x: 5 }, { x: 10 } ]
+
+// one can of course also provide a custom function
+// example: pick  maximum of the absolute values
 function absMax(chunk) {
   let ret = chunk[0];
   for (const x of chunk) {
