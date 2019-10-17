@@ -25,11 +25,17 @@ import * as binData from "@mhyfritz/bin-data";
 Browser:
 
 ```html
-<!-- unpkg -->
+<!-- import from unpkg -->
 <script src="https://unpkg.com/@mhyfritz/bin-data"></script>
 
-<!-- jsdelivr -->
+<!-- import from jsdelivr -->
 <script src="https://cdn.jsdelivr.net/npm/@mhyfritz/bin-data"></script>
+
+<!-- usage; module is globally registered as `mhyfritzBinData` -->
+<script>
+  const { bin } = mhyfritzBinData;
+  bin([1, 2, 3, 4, 5], 2);
+</script>
 ```
 
 API:
