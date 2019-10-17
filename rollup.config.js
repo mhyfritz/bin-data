@@ -4,10 +4,24 @@ import babel from "rollup-plugin-babel";
 import * as pkg from "./package.json";
 import camelCase from "camelcase";
 
+/*
+  generate module name for in-browser use
+  `module` => `module`
+  `my-module` => `myModule`
+  `@scope/module` => `scopeModule`
+  `@scope/my-module` => `scopeMyModule`
+  `@my-scope/my-module` => `myScopeMyModule`
+*/
+let nameBrowser = pkg.name;
+if (/^@.+\//.test(nameBrowser)) {
+  nameBrowser = nameBrowser.substring(1).replace("/", "-");
+}
+nameBrowser = camelCase(nameBrowser);
+
 const config = {
   input: "src/index.js",
   output: {
-    name: camelCase(pkg.name),
+    name: nameBrowser,
     format: "umd",
     banner: `// ${pkg.homepage} v${
       pkg.version
