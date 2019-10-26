@@ -12,7 +12,7 @@ npm install @mhyfritz/bin-data
 
 [Try `bin-data` in your browser.](https://npm.runkit.com/@mhyfritz/bin-data)
 
-Node:
+Node / module bundlers:
 
 ```javascript
 const binData = require("@mhyfritz/bin-data");
