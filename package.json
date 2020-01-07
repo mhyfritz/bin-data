@@ -1,6 +1,6 @@
 {
   "name": "@mhyfritz/bin-data",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Bin data into given number of chunks and pick a representative value for each bin.",
   "main": "dist/@mhyfritz/bin-data.umd.js",
   "module": "dist/@mhyfritz/bin-data.esm.js",
